@@ -3,11 +3,9 @@ package PharmacyApp;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
-import test.hibernate.Medicine;
 
 public class AppClass {
     private JFrame frame;
@@ -173,7 +171,7 @@ public class AppClass {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("test_persistence");
         EntityManager em = emf.createEntityManager();
         
-        System.out.println("Starting a hibernate test");
+        System.out.println("Database is successfully connected!");
         
         em.getTransaction().begin();
         
@@ -187,7 +185,6 @@ public class AppClass {
 
        // System.out.println("New Medicine name is " + med.getName());
         Medicine med = em.find(Medicine.class, 1);
-        
         System.out.println("Found! Medicine name is " + med.getName());
         
         SwingUtilities.invokeLater(() -> new AppClass().show());

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.1">
-    <persistence-unit name="test_persistence">
+    <persistence-unit name="PharmacyAppPersistence">
         <class>PharmacyApp.Medicine</class>
         <class>PharmacyApp.Disease</class>
         <class>PharmacyApp.Pharmacy</class>
+        <class>PharmacyApp.Sale</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
